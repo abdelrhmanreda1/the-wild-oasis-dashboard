@@ -35,6 +35,7 @@ const FilterButton = styled.button`
   }
   @media (max-width: 768px) {
     padding: 0.8rem 0.6rem;
+    font-size: 1.2rem;
   }
 `;
 

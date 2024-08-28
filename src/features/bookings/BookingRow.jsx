@@ -39,9 +39,11 @@ const Stacked = styled.div`
 `;
 
 const EmailColumn = styled(Stacked)`
-  /* min-width: 160px; */
   max-width: 180px;
   overflow-wrap: break-word;
+  @media (max-width: 768px) {
+    min-width: 200px;
+  }
 `;
 
 const Dates = styled(Stacked)`
@@ -49,11 +51,17 @@ const Dates = styled(Stacked)`
   overflow-wrap: break-word;
   white-space: normal;
   margin: 0px 6px;
+  @media (max-width: 768px) {
+    min-width: 19;
+  }
 `;
 
 const Amount = styled(Stacked)`
   max-width: 180px;
   overflow-wrap: break-word;
+  @media (max-width: 768px) {
+    min-width: 100px;
+  }
 `;
 
 function BookingRow({

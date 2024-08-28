@@ -22,13 +22,39 @@ const CommonRow = styled.div`
 
 const StyledHeader = styled(CommonRow)`
   padding: 1.6rem 2.4rem;
-
   background-color: var(--color-grey-50);
   border-bottom: 1px solid var(--color-grey-100);
   text-transform: uppercase;
   letter-spacing: 0.4px;
   font-weight: 600;
   color: var(--color-grey-600);
+
+  @media (max-width: 768px) {
+    & > div:nth-child(1) {
+      flex-basis: 0.6fr;
+      min-width: 50px;
+    }
+    & > div:nth-child(2) {
+      flex-basis: 2fr;
+      min-width: 90px;
+    }
+    & > div:nth-child(3) {
+      flex-basis: 2.4fr;
+      min-width: 70px;
+    }
+    & > div:nth-child(4) {
+      flex-basis: 1.4fr;
+      min-width: 80px;
+    }
+    & > div:nth-child(5) {
+      flex-basis: 1fr;
+      min-width: 50px;
+    }
+    & > div:nth-child(6) {
+      flex-basis: 3.2rem;
+      min-width: 50px;
+    }
+  }
 `;
 
 const StyledRow = styled(CommonRow)`

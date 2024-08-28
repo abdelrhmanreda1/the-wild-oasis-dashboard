@@ -11,10 +11,44 @@ import Spinner from "../../ui/Spinner";
 import { useMoveBack } from "../../hooks/useMoveBack";
 import { useBooking } from "../bookings/useBooking";
 import { useEffect, useState } from "react";
-import Checkbox from "../../ui/Checkbox";
+
 import { formatCurrency } from "../../utils/helpers";
 import { useCheckin } from "./useCheckin";
 import { useSettings } from "../settings/useSettings";
+
+// الكود الخاص بـ Checkbox جوا CheckinBooking
+const StyledCheckbox = styled.div`
+  display: flex;
+  gap: 1.6rem;
+
+  & input[type="checkbox"] {
+    height: 2.4rem;
+    width: 2.4rem;
+    outline-offset: 2px;
+    transform-origin: 0;
+    accent-color: var(--color-brand-600);
+  }
+
+  & input[type="checkbox"]:disabled {
+    accent-color: var(--color-brand-600);
+  }
+
+  & label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+`;
+
+function Checkbox({ checked, onChange, disabled = false, id, children }) {
+  return (
+    <StyledCheckbox>
+      <input type="checkbox" id={id} checked={checked} onChange={onChange} disabled={disabled} />
+      <label htmlFor={!disabled ? id : ""}>{children}</label>
+    </StyledCheckbox>
+  );
+}
 
 const Box = styled.div`
   /* Box */

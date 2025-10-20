@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
 import { IoMdClose } from "react-icons/io";
-import Uploader from "../data/Uploader.jsx";
+// import Uploader from "../data/Uploader.jsx";
 const Overlay = styled.div`
   display: ${(props) => (props.isOpen ? "block" : "none")};
   position: fixed;
@@ -70,7 +70,7 @@ function Sidebar({ isOpen, onClose }) {
         </CloseButton>
         <Logo />
         <MainNav />
-        <Uploader />
+        {/* <Uploader /> */}
       </StyledSidebar>
     </>
   );
